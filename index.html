@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+        <!-- Start Header -->
+        <header>
+            <div class="container">
+                <h1>Library</h1>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start Main -->
+        <div class="container-main">
+            <main>
+                <button class="add-btn">+ Add book</button>
+                <div class="book-table">
+                    <h2>Books Database</h2>
+                    <div class="responsive-table">
+                        <table id="bookTable">
+                            <thead>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>Author</td>
+                                    <td>Pages</td>
+                                    <td>Read</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        <!-- End Main -->
+        <!-- Start Footer  -->
+        <footer>
+            <p>Copyright © <script>document.write(new Date().getFullYear())</script> Musab OD</p>
+        </footer>
+    </div>
+        <!-- End Footer  -->
+        <!-- Start Modal  -->
+        <div class="modal" id="addBookModal">
+            <form class="add-book-form" id="addBookForm">
+                <h3>Add New Book</h3>
+                <input class="input" id="title" type="text" maxlength="100" placeholder="Title" required>
+                <p class="error-msg">This book already exists in your library</p>
+                <input class="input" id="author" type="text" maxlength="100" placeholder="Author" required>
+                <input class="input" id="pages" type="text" maxlength="10000" placeholder="Pages" required>
+                <div class="is-read">
+                    <label for="is-read">Have you read it?</label>
+                    <input type="checkbox" id="isRead" class="checkbox">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+        <!-- End Modal  -->
+        <div class="overlay"></div>
+    <script src="main.js"></script>
+</body>
+</html>
